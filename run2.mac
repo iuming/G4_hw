@@ -1,0 +1,44 @@
+# Macro file for example B1
+# 
+# To be run preferably in batch, without graphics:
+# % exampleB1 run2.mac
+#
+/run/numberOfThreads 4
+/run/initialize
+#
+/control/verbose 2
+/run/verbose 2
+# /event/verbose 2
+# /tracking/verbose 2
+
+
+
+#
+# gamma 6 MeV to the direction (0.,0.,1.)
+# 10000 events
+#
+#/gun/particle gamma
+#/gun/energy 1 MeV
+
+ 
+# 
+# carbon Kinetic Energy.
+# 400.MeV/u * 12(AtomicMass) = 4800. MeV
+#
+# /gun/particle ion
+# /gun/ion 6 12 6
+# /gun/energy 2250. MeV
+
+
+# 
+# proton 210 MeV to the direction (0.,0.,1.)
+# 1000 events
+#
+# /gun/particle proton
+# /gun/energy 101 MeV
+
+
+
+
+# /run/printProgress 1000
+/run/beamOn 100
