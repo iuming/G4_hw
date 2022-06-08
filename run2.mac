@@ -17,8 +17,8 @@
 # gamma 6 MeV to the direction (0.,0.,1.)
 # 10000 events
 #
-#/gun/particle gamma
-#/gun/energy 1 MeV
+# /gun/particle gamma
+# /gun/energy 1 MeV
 
  
 # 
@@ -27,7 +27,7 @@
 #
 # /gun/particle ion
 # /gun/ion 6 12 6
-# /gun/energy 2250. MeV
+# /gun/energy 1250. MeV
 
 
 # 
@@ -41,4 +41,4 @@
 
 
 # /run/printProgress 1000
-/run/beamOn 100
+/run/beamOn 10000

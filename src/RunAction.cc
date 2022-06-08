@@ -84,11 +84,15 @@ RunAction::RunAction()
   // Creating ntuple
   //
   analysisManager->CreateNtuple("data", "Edep and Position");
-  analysisManager->CreateNtupleIColumn("volumeID");
+//  analysisManager->CreateNtupleIColumn("volumeID");
   analysisManager->CreateNtupleDColumn("x");
   analysisManager->CreateNtupleDColumn("y");
   analysisManager->CreateNtupleDColumn("z");
   analysisManager->CreateNtupleDColumn("edep");
+    analysisManager->CreateNtupleDColumn("x2");
+    analysisManager->CreateNtupleDColumn("y2");
+    analysisManager->CreateNtupleDColumn("z2");
+    analysisManager->CreateNtupleDColumn("edep2");
   analysisManager->FinishNtuple();
 }
 

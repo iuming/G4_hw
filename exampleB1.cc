@@ -81,8 +81,10 @@ int main(int argc,char** argv)
   // runManager->SetUserInitialization(physicsList);
 
   auto phylist=new G4PhysListFactory();
-  runManager->SetUserInitialization(phylist->GetReferencePhysList("QGSP_BIC_HP"));
-  //carbon:QGSP_BIC_EMY FTF_BIC_EMY FTFP_BERT_EMY QGSP_BERT_95_EMY QGSP_BIC_EMV QGSP_BERT_EMY（不大行）
+//  runManager->SetUserInitialization(phylist->GetReferencePhysList("QGSP_BIC_EMV"));             // Carbon
+//  runManager->SetUserInitialization(phylist->GetReferencePhysList("QGSP_BERT"));                // Proton
+  runManager->SetUserInitialization(phylist->GetReferencePhysList("QGSP_BIC_HP"));              // neutron
+    //carbon:QGSP_BIC_EMY FTF_BIC_EMY FTFP_BERT_EMY QGSP_BERT_95_EMY QGSP_BIC_EMV QGSP_BERT_EMY（不大行）
   //proton: QGSP_BERT QGSP_BIC FTFP_BERT
   //neutron:QGSP_BIC_HP QGSP_BERT_HP  FTFPP_BERT_HP(不大行)
 

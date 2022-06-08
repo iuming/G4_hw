@@ -88,14 +88,14 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     fEventAction->AddEdep(edepStep);
 
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->FillNtupleIColumn(0, 1);
+//    analysisManager->FillNtupleIColumn(0, 1);
     analysisManager->FillNtupleDColumn(1, stepx);
     analysisManager->FillNtupleDColumn(2, stepy);
     analysisManager->FillNtupleDColumn(3, stepz);
     analysisManager->FillNtupleDColumn(4, edepStep);
     analysisManager->AddNtupleRow();   
   }
-  else if( (volumename=="Chest") || (volumename=="Neck") || (volumename=="Head")
+  else if( (volumename=="Chest") || (volumename=="Neck") || (volumename=="Head") || (volumename=="Tumor")
             || (volumename=="Lleg") || (volumename=="Rleg") )
   {
     // collect energy deposited in this step
@@ -113,12 +113,16 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     fEventAction->AddEdep(edepStep);
 
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->FillNtupleIColumn(0, 2);
-    analysisManager->FillNtupleDColumn(1, stepx);
-    analysisManager->FillNtupleDColumn(2, stepy);
-    analysisManager->FillNtupleDColumn(3, stepz);
-    analysisManager->FillNtupleDColumn(4, edepStep);
-    analysisManager->AddNtupleRow();  
+//    analysisManager->FillNtupleIColumn(0, 2);
+//    analysisManager->FillNtupleDColumn(1, stepx);
+//    analysisManager->FillNtupleDColumn(2, stepy);
+//    analysisManager->FillNtupleDColumn(3, stepz);
+//    analysisManager->FillNtupleDColumn(4, edepStep);
+      analysisManager->FillNtupleDColumn(5, stepx);
+      analysisManager->FillNtupleDColumn(6, stepy);
+      analysisManager->FillNtupleDColumn(7, stepz);
+      analysisManager->FillNtupleDColumn(8, edepStep);
+    analysisManager->AddNtupleRow();
   }
   else
     return;

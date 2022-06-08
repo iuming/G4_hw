@@ -41,20 +41,21 @@ target_link_libraries(exampleB1 ${Geant4_LIBRARIES})
 # relies on these scripts being in the current working directory.
 #
 set(EXAMPLEB1_SCRIPTS
-  exampleB1.in
-  exampleB1.out
-  init_vis.mac
-  run1.mac
-  run2.mac
-  vis.mac
-  )
+        exampleB1.in
+        exampleB1.out
+        init_vis.mac
+        run1.mac
+        run2.mac
+        vis.mac
+        plotNtuple.cpp
+        )
 
 foreach(_script ${EXAMPLEB1_SCRIPTS})
   configure_file(
-    ${PROJECT_SOURCE_DIR}/${_script}
-    ${PROJECT_BINARY_DIR}/${_script}
-    COPYONLY
-    )
+          ${PROJECT_SOURCE_DIR}/${_script}
+          ${PROJECT_BINARY_DIR}/${_script}
+          COPYONLY
+  )
 endforeach()
 
 #----------------------------------------------------------------------------
